@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang = "en-us">
+     <head>
+         <title>homework</title>
+        
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+         <!--Added Moment JS-->
+        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    </head>
+     <body> 
+         <!-- Jumbotron -->
+        <div class="jumbotron">
+        <h1 class="text-center">Anytime is Train Time!<br>Choo Choo Chee Chee</h1>
+        </div>
+        <div class="col-lg-6">
+                <div class="card card-default">
+                  <div class="card-heading">
+                    <h3 class="card-title">Add Train</h3>
+                  </div>
+                  <div class="card-body">
+        
+                    <!-- Sign-up Form (note the various input "types")-->
+                    <form role="form">
+                      <div class="form-group row">
+                        <label for="name-input">Train Name:</label>
+                        <input class="form-control" id="name-input" type="text">
+                      </div>
+                      <div class="form-group row">
+                        <label for="destination-input">Destination:</label>
+                        <input class="form-control" id="destination-input" type="text">
+                      </div>
+                      <div class="form-group row">
+                        <label for="time-input">First Train Time(HH:mm-military time):</label>
+                        <input class="form-control" id="time-input" type="text">
+                      </div>
+                      <div class="form-group row">
+                        <label for="min-input">Frequecncy(min)</label>
+                        <input class="form-control" id="min-input" type="number">
+                        
+                      </div>
+                      <button class="btn btn-default" id="add-user" type="submit">Submit</button>
+                    </form>
+
+
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Current Train Schedule</h3>
+                      </div>
+                      <div class="panel-body">
+                          <table class="table">
+                               <thead> 
+                                 <tr>
+                                   <th>Train Name</th>
+                                   <th>Destination</th>
+                                   <th>Frequecncy (min)</th>
+                                   <th>Next Arrival</th>
+                                   <th>Minutes Away</th> 
+                              
+                                 </tr>
+                               </thead>
+                               <tbody id ="full-train-list">
+
+                               </tbody>
+                            </table>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              <script src="home.js"></script>
+
+        
+     </body>
+</html>
